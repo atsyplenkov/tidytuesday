@@ -55,10 +55,10 @@ r4ds_members %>%
   scale_y_continuous(breaks = c(0, 750, 1500, 2250, 3000),
                      labels = function(...) prettyNum(..., big.mark = " "), 
                      sec.axis = sec_axis(~ . / 30,
-                                         name = "Google search hits")) +
+                                         name = "Google search hits for 'data science'")) +
   scale_x_date(date_breaks = "2 months", date_labels = "%b %y") +
   ggsci::scale_color_startrek(name = "",
-                              labels = c("Google Search Hits",
+                              labels = c("Google Search Hits for 'data science'",
                                          "R4DS Total Membership")) +
   labs(x = "", y = "Total Membership",
        title = "R4DS community through time",
