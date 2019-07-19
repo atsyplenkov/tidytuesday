@@ -67,6 +67,7 @@ r4ds_members %>%
   theme_clean() -> timeline
 
 # Scatterplot
+# *Get sum of members for every week
 openair::timeAverage(r4ds_members,
                      avg.time = "7 day",
                      statistic = "sum") %>% 
@@ -93,7 +94,8 @@ r4ds_members %>%
               se = F,
               color = "coral") +
   scale_y_log10() +
-  scale_x_date(date_breaks = "2 months", date_labels = "%b %y") +
+  scale_x_date(date_breaks = "2 months",
+               date_labels = "%b %y") +
   labs(x = "", y = "Percent of active members, %",
        title = "R4DS community through time",
        subtitle = "Is the increase in total membership is significant in the end?",
