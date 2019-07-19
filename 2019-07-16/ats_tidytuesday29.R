@@ -56,7 +56,8 @@ r4ds_members %>%
                      labels = function(...) prettyNum(..., big.mark = " "), 
                      sec.axis = sec_axis(~ . / 30,
                                          name = "Google search hits for 'data science'")) +
-  scale_x_date(date_breaks = "2 months", date_labels = "%b %y") +
+  scale_x_date(date_breaks = "2 months",
+               date_labels = "%b %y") +
   ggsci::scale_color_startrek(name = "",
                               labels = c("Google Search Hits for 'data science'",
                                          "R4DS Total Membership")) +
